@@ -1,0 +1,29 @@
+<ion-header [translucent]="true">
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+        <ion-title>Duty List</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" style="align-content: center;">
+    <!-- <ion-header collapse="condense">
+        <ion-toolbar>
+            <ion-title size="large">{{ folder }}</ion-title>
+        </ion-toolbar>
+    </ion-header> -->
+
+    <ion-input placeholder="Enter Pracharak Name" [(ngModel)]="pracharakName"></ion-input>
+    <ion-label style="padding: 20%;">OR</ion-label>
+
+    <ion-input placeholder="Enter Sector Number" [(ngModel)]="sectorNumber"></ion-input>
+    <ion-button expand="block" (click)="displayDutyDetails()">Display Duty List</ion-button>
+    <ion-button expand="block">Download Duty List</ion-button>
+
+
+    <!-- <div id="container">
+        <strong class="capitalize">{{ folder }}</strong>
+        <p>Explore <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+      </div> -->
+</ion-content>
