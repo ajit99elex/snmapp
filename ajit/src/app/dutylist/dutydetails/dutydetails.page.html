@@ -1,0 +1,29 @@
+<ion-header [translucent]="true">
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+        <ion-title>Duty Details</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-card *ngFor="let duty of dutyDetails;">
+        <ion-card-header>
+            <ion-card-title>{{duty.dutydate}}</ion-card-title>
+            <ion-card-subtitle>{{duty.satsangtime}}</ion-card-subtitle>
+        </ion-card-header>
+        <ion-item *ngIf="screenToBeDisplayed != 'pracharak'">
+            <ion-label style="white-space: pre-wrap;">Pracharak Name: {{duty.pracharakname}}</ion-label>
+        </ion-item>
+        <ion-item *ngIf="screenToBeDisplayed != 'pracharak'">
+            <ion-label>Pracharak Contact: {{duty.pracharakcontact}}</ion-label>
+        </ion-item>
+        <ion-item>
+            <ion-label>Satsang Contact: {{duty.satsangcontact}}</ion-label>
+        </ion-item>
+        <ion-card-content>
+            Address: {{duty.satsangaddress}}
+        </ion-card-content>
+    </ion-card>
+</ion-content>

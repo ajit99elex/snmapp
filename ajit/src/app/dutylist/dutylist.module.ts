@@ -7,13 +7,17 @@ import { IonicModule } from '@ionic/angular';
 import { DutylistPageRoutingModule } from './dutylist-routing.module';
 
 import { DutylistPage } from './dutylist.page';
+import { MatAutocompleteModule } from '@angular/material/autocomplete';
+import { AutoCompleteModule } from 'ionic4-auto-complete';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    DutylistPageRoutingModule
+    DutylistPageRoutingModule,
+    MatAutocompleteModule,    
+    AutoCompleteModule
   ],
   declarations: [DutylistPage]
 })

@@ -4,7 +4,7 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'dutylist',
+    redirectTo: 'home',
     pathMatch: 'full'
   },
   {
@@ -18,6 +18,14 @@ const routes: Routes = [
   {
     path: 'dutyDetails',
     loadChildren: () => import('./dutylist/dutydetails/dutydetails.module').then( m => m.DutydetailsPageModule)
+  },
+  {
+    path: 'home',
+    loadChildren: () => import('./home/home/home.module').then( m => m.HomePageModule)
+  },
+  {
+    path: 'admin',
+    loadChildren: () => import('./admin/admin.module').then( m => m.AdminPageModule)
   }
 ];
 
@@ -27,4 +35,4 @@ const routes: Routes = [
   ],
   exports: [RouterModule]
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

@@ -1,0 +1,19 @@
+<ion-header [translucent]="true">
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+        <ion-title>Admin</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <!-- <form> -->
+    <ion-card>
+        <ion-item>
+            <ion-label>Upload file containing Duty Details</ion-label>
+        </ion-item>
+        <ion-input type="file" multiple (change)="uploadFile($event)" #uploadFileElement></ion-input>
+    </ion-card>
+    <!-- </form> -->
+</ion-content>

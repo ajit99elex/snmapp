@@ -1,0 +1,67 @@
+<ion-header [translucent]="true">
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+        <ion-title>Duty List</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" style="align-content: center;">
+    <ion-auto-complete #pracharakName [dataProvider]="pracharakNameService" [options]="{ placeholder : 'Pracharak Name' }"></ion-auto-complete>
+    <ion-title>OR</ion-title>
+    <ion-auto-complete #branchName [dataProvider]="branchNameService" [options]="{ placeholder : 'Branch Name' }"></ion-auto-complete>
+    <ion-title>OR</ion-title>
+    <!-- <ion-auto-complete #sectorNumber [dataProvider]="sectorNumberService" [options]="{ placeholder : 'Sector Number' }"></ion-auto-complete> -->
+    <ion-input [(ngModel)]="sectorNumber" placeholder="Sector Number"></ion-input>
+
+    <!-- <ion-header collapse="condense">
+        <ion-toolbar>
+            <ion-title size="large">{{ folder }}</ion-title>
+        </ion-toolbar>
+    </ion-header> -->
+    <!-- <ion-input placeholder="Enter Pracharak Name" [(ngModel)]="pracharakName"></ion-input>
+    <ion-input placeholder="Enter Sector Number" [(ngModel)]="sectorNumber"></ion-input>
+    <ion-input placeholder="Enter Branch Name" [(ngModel)]="branchName"></ion-input> -->
+    <ion-button expand="block" (click)="displayDutyDetails($event)">Display Duty List</ion-button>
+    <ion-button expand="block">Download Duty List</ion-button>
+
+    <!-- <form class="example-form">
+        <mat-form-field class="example-full-width">
+            <input type="text" placeholder="Pick one" aria-label="Number" matInput [formControl]="myControl" [matAutocomplete]="auto" name="myControl">
+            <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
+                <mat-option *ngFor="let option of options" [value]="option">
+                    {{option}}
+                </mat-option>
+            </mat-autocomplete>
+        </mat-form-field>
+    </form> -->
+    <!-- <ion-searchbar showcancelbutton="" (ionInput)="filterList($event)"></ion-searchbar>
+    <ion-list lines="none">
+        <ion-item *ngFor="let foodItem of foodList">
+            <ion-label class="ion-text-wrap">
+                <ion-text color="primary">
+                    <h3>{{ foodItem }}</h3>
+                </ion-text>
+                <p>{{ foodItem }}</p>
+            </ion-label>
+        </ion-item>
+    </ion-list> -->
+    <!-- <div id="container">
+        <strong class="capitalize">{{ folder }}</strong>
+        <p>Explore <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+      </div> -->
+</ion-content>
+
+
+
+
+<!-- <h3>Advanced</h3>
+<p-autoComplete [(ngModel)]="brand" [suggestions]="filteredBrands" (completeMethod)="filterBrands($event)" [size]="30" [minLength]="1" placeholder="Hint: type 'v' or 'f'" [dropdown]="true">
+    <ng-template let-brand pTemplate="item">
+        <div class="ui-helper-clearfix">
+            <div style="font-size:18px;margin:10px 10px 0 0">{{brand}}</div>
+        </div>
+    </ng-template>
+</p-autoComplete>
+<span style="margin-left:50px">Brand: {{brand||'none'}}</span> -->
